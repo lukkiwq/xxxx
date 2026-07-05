@@ -47,6 +47,11 @@ input{
     font-size:15px;
 }
 
+.row-btn {
+    display: flex;
+    gap: 10px;
+}
+
 button{
     width:100%;
     padding:14px;
@@ -73,6 +78,12 @@ button:disabled{
     text-align:center;
 }
 
+footer{
+    margin-top:25px;
+    text-align:center;
+    color:#9ca3af;
+    font-size:13px;
+}
 </style>
 
 </head>
@@ -88,11 +99,18 @@ id="url"
 placeholder="Cole o link"
 autocomplete="off">
 
-<button id="download">
-Baixar Vídeo
-</button>
+<div class="row-btn">
+    <button id="download">
+    Baixar Vídeo
+    </button>
+    <button id="clear">Limpar</button>
+</div>
 
 <p id="status"></p>
+
+<footer>
+Developed by lukkiwq
+</footer>
 
 </div>
 
@@ -101,6 +119,7 @@ Baixar Vídeo
 const TOKEN = "dcd385790e136e2889709f0fd41c17ee8cca47762c08383b2ea3b73707edcd61";
 
 const btn = document.getElementById("download");
+const btnClear = document.getElementById("clear");
 const status = document.getElementById("status");
 
 btn.onclick = async () => {
@@ -162,6 +181,8 @@ btn.onclick = async () => {
     btn.disabled = false;
 
 }
+
+btnClear.addEventListener("click", () => url.value = "")
  // n usei sua api para mal uso, foi apenas pra cnsg baixar videos 😭
  // só eu utilizei
 </script>
