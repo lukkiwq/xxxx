@@ -1,6 +1,6 @@
 const TOKEN = "dcd385790e136e2889709f0fd41c17ee8cca47762c08383b2ea3b73707edcd61";
 
-let url = document.getElementById("url");
+let input = document.getElementById("url");
 const btn = document.getElementById("download");
 const btnClear = document.getElementById("clear");
 const status = document.getElementById("status");
@@ -9,7 +9,7 @@ const btnCopy = document.getElementById("clipboard");
 btnCopy.addEventListener("click", async () => {
   try {
     const texto = await navigator.clipboard.readText();
-    url.value = texto;
+    input.value = texto;
   } catch (erro) {
     console.error("Não foi possível ler a área de transferência:", erro);
   }
@@ -17,7 +17,7 @@ btnCopy.addEventListener("click", async () => {
 
 btn.onclick = async () => {
 
-    url = document.getElementById("url").value.trim();
+    const url = document.getElementById("url").value.trim();
 
     const url_formatada = url.match(/https?:\/\/[^\s]+/)?.[0];
 

@@ -96,13 +96,6 @@ footer{
     border: none;
     color: #424242ab;
     cursor: pointer;
-    transition: transform 0.6s ease;
-}
-
-#clear:hover {
-    transform: translateY(-4px);
-    color: #ff9a44;
-    opacity: 85%;
 }
 
 #clipboard {
@@ -111,13 +104,6 @@ footer{
     border: none;
     color: #42424298;
     cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-#clipboard:hover {
-    transform: translateY(-4px);
-    color: #ff9a44;
-    opacity: 85%;
 }
 
 .buttons-sec {
