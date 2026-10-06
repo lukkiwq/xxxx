@@ -3,7 +3,7 @@ const TOKEN = "dcd385790e136e2889709f0fd41c17ee8cca47762c08383b2ea3b73707edcd61"
 let input = document.getElementById("url");
 const btn = document.getElementById("download");
 const btnClear = document.getElementById("clear");
-const status = document.getElementById("status");
+const statusEl = document.getElementById("status");
 const btnCopy = document.getElementById("clipboard");
 
 btnCopy.addEventListener("click", async () => {
@@ -22,12 +22,12 @@ btn.onclick = async () => {
     const url_formatada = url.match(/https?:\/\/[^\s]+/)?.[0];
 
     if(!url_formatada){
-        status.textContent = "Informe um link.";
+        statusEl.textContent = "Informe um link.";
         return;
     }
 
     btn.disabled = true;
-    status.textContent = "Buscando vídeo...";
+    statusEl.textContent = "Buscando vídeo...";
 
     try{
 
@@ -63,11 +63,11 @@ btn.onclick = async () => {
         a.click();
         a.remove();
 
-        status.textContent = "Download iniciado!";
+        statusEl.textContent = "Download iniciado!";
 
     }catch{
 
-        status.textContent = "Erro ao baixar o vídeo.";
+        statusEl.textContent = "Erro ao baixar o vídeo.";
 
     }
     url.value = ""
