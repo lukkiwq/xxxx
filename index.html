@@ -3,37 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>xx</title>
+    <title>Kwai Downloader</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Kwai Downloader</h1>
+      <header class="brand">
+        <span class="brand-icon"><i class="fa-solid fa-arrow-down"></i></span>
+        <span class="brand-name">Kwai Downloader</span>
+      </header>
 
-      <div class="inputx">
+      <main class="main">
+        <div class="intro">
+          <h1>Cole o link.<br /><span>Baixe o vídeo.</span></h1>
+          <p>Copie o link do vídeo no Kwai, cole abaixo e toque em baixar.</p>
+        </div>
 
-          <input
-            class="url"
-            id="url"
-            placeholder="Cole o link"
-            autocomplete="off"
-          />
-          <div class="buttons-sec">
-              <button id="clipboard"><i class="fa-solid fa-clipboard"></i></button>
-              <button id="clear"><i class="fa-solid fa-trash"></i></button>
+        <div class="card">
+          <div class="inputx">
+            <input
+              class="url"
+              id="url"
+              placeholder="https://kwai.com/…"
+              autocomplete="off"
+              aria-label="Link do vídeo"
+            />
+            <div class="buttons-sec">
+              <button id="clipboard" aria-label="Colar link"><i class="fa-solid fa-clipboard"></i></button>
+              <button id="clear" aria-label="Limpar link"><i class="fa-solid fa-xmark"></i></button>
+            </div>
           </div>
-      </div>
 
+          <div class="row-btn">
+            <button id="download"><i class="fa-solid fa-download"></i> Baixar Vídeo</button>
+          </div>
 
-      <div class="row-btn">
-        <button id="download">Baixar Vídeo</button>
-      </div>
+          <p id="status"></p>
+        </div>
 
-      <p id="status"></p>
+        <ol class="steps">
+          <li><span>1</span>Abra o vídeo no Kwai e copie o link</li>
+          <li><span>2</span>Cole o link no campo acima</li>
+          <li><span>3</span>Toque em baixar e pronto</li>
+        </ol>
+      </main>
 
-      <footer>Developed by <span id="copy">lukkiwq..</span></footer>
+      <footer>Developed by  <span id="copy">lukkiwq..</span></footer>
     </div>
   </body>
 </html>
