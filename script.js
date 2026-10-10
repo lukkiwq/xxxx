@@ -64,6 +64,7 @@ btn.onclick = async () => {
         a.remove();
 
         statusEl.textContent = "Download iniciado!";
+        statusEl.textContent = "";
 
     }catch{
 
