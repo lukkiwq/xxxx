@@ -1,19 +1,9 @@
 const TOKEN = "dcd385790e136e2889709f0fd41c17ee8cca47762c08383b2ea3b73707edcd61";
 
-let input = document.getElementById("url");
 const btn = document.getElementById("download");
 const btnClear = document.getElementById("clear");
 const statusEl = document.getElementById("status");
 const btnCopy = document.getElementById("clipboard");
-
-btnCopy.addEventListener("click", async () => {
-  try {
-    const texto = await navigator.clipboard.readText();
-    input.value = texto;
-  } catch (erro) {
-    console.error("Não foi possível ler a área de transferência:", erro);
-  }
-});
 
 btn.onclick = async () => {
 
@@ -64,7 +54,6 @@ btn.onclick = async () => {
         a.remove();
         
         url.value = ""
-        input.value = ""
         statusEl.textContent = "Download iniciado!";
         statusEl.textContent = "";
 
