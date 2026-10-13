@@ -139,6 +139,8 @@ input::placeholder {
     display: flex;
     gap: 2px;
 }
+
+#clipboard,
 #clear {
     width: 44px;
     height: 44px;
@@ -149,6 +151,11 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#clipboard {
+    background: var(--chip);
+    color: var(--text);
 }
 
 #clear {
