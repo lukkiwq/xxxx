@@ -62,7 +62,9 @@ btn.onclick = async () => {
         document.body.appendChild(a);
         a.click();
         a.remove();
-
+        
+        url.value = ""
+        input.value = ""
         statusEl.textContent = "Download iniciado!";
         statusEl.textContent = "";
 
